@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://enjmj0ap4g8g"]
+[gd_scene load_steps=7 format=3 uid="uid://enjmj0ap4g8g"]
 
 [ext_resource type="Texture2D" uid="uid://2d2snvea8v4" path="res://assets/wall.png" id="1_fvtvw"]
-[ext_resource type="Texture2D" uid="uid://bbh2gfrvmdpu" path="res://assets/floor.png" id="2_tw2gb"]
 [ext_resource type="Texture2D" uid="uid://doa00vl4xw2uf" path="res://assets/table.png" id="3_73a6n"]
 [ext_resource type="Texture2D" uid="uid://cv2pyir3wuadn" path="res://assets/tank.png" id="4_vtdbg"]
 [ext_resource type="Texture2D" uid="uid://cmwfw2bvbrch2" path="res://assets/water.png" id="5_6y8bk"]
@@ -15,29 +14,18 @@ shader_parameter/water_texture = ExtResource("5_6y8bk")
 [node name="RoomScene" type="Node2D"]
 texture_filter = 1
 texture_repeat = 1
+position = Vector2(574, 268)
 
 [node name="Wall" type="Sprite2D" parent="."]
-z_index = -3
-position = Vector2(624, 148)
-scale = Vector2(2.488, 3.364)
 texture = ExtResource("1_fvtvw")
 
-[node name="Floor" type="Sprite2D" parent="."]
-z_index = -2
-position = Vector2(623, 649.747)
-rotation = -1.5708
-scale = Vector2(0.394609, 2.48912)
-texture = ExtResource("2_tw2gb")
-
 [node name="Table" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(625, 666)
-scale = Vector2(2.012, 2.16606)
+position = Vector2(0, 250)
 texture = ExtResource("3_73a6n")
 
 [node name="Tank" type="Sprite2D" parent="."]
-position = Vector2(654, 224)
-scale = Vector2(2.02, 1.796)
+position = Vector2(-16, 102)
+scale = Vector2(1.50509, 1.4285)
 texture = ExtResource("4_vtdbg")
 
 [node name="Water" type="Sprite2D" parent="Tank"]
