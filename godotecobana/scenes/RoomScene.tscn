@@ -17,15 +17,18 @@ texture_repeat = 1
 position = Vector2(574, 268)
 
 [node name="Wall" type="Sprite2D" parent="."]
+position = Vector2(95, -4)
+scale = Vector2(1.19219, 1.06667)
 texture = ExtResource("1_fvtvw")
 
 [node name="Table" type="Sprite2D" parent="."]
-position = Vector2(0, 250)
+position = Vector2(84, 368.5)
+scale = Vector2(1.22656, 1.065)
 texture = ExtResource("3_73a6n")
 
 [node name="Tank" type="Sprite2D" parent="."]
-position = Vector2(-16, 102)
-scale = Vector2(1.50509, 1.4285)
+position = Vector2(90, 193)
+scale = Vector2(1.56255, 1.61625)
 texture = ExtResource("4_vtdbg")
 
 [node name="Water" type="Sprite2D" parent="Tank"]
