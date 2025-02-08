@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://enjmj0ap4g8g"]
+
+[node name="RoomScene" type="Node2D"]
+texture_filter = 1
+texture_repeat = 1
