@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://enjmj0ap4g8g"]
+[gd_scene load_steps=7 format=3 uid="uid://enjmj0ap4g8g"]
 
 [ext_resource type="Texture2D" uid="uid://2d2snvea8v4" path="res://assets/wall.png" id="1_fvtvw"]
 [ext_resource type="Texture2D" uid="uid://bbh2gfrvmdpu" path="res://assets/floor.png" id="2_tw2gb"]
 [ext_resource type="Texture2D" uid="uid://doa00vl4xw2uf" path="res://assets/table.png" id="3_73a6n"]
 [ext_resource type="Texture2D" uid="uid://cv2pyir3wuadn" path="res://assets/tank.png" id="4_vtdbg"]
 [ext_resource type="Texture2D" uid="uid://cmwfw2bvbrch2" path="res://assets/water.png" id="5_6y8bk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_37ou3"]
 
 [node name="RoomScene" type="Node2D"]
 texture_filter = 1
@@ -31,7 +33,8 @@ position = Vector2(654, 224)
 scale = Vector2(2.02, 1.796)
 texture = ExtResource("4_vtdbg")
 
-[node name="Water" type="Sprite2D" parent="."]
-position = Vector2(615.344, 201.469)
-scale = Vector2(0.403308, 0.328484)
+[node name="Water" type="Sprite2D" parent="Tank"]
+material = SubResource("ShaderMaterial_37ou3")
+position = Vector2(-19.1368, -12.5452)
+scale = Vector2(0.199657, 0.182897)
 texture = ExtResource("5_6y8bk")
