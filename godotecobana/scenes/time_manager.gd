@@ -1,6 +1,6 @@
 extends Node
 
-signal time_updated(day, time_of_day)
+signal time_updated(day, time_of_day)  # ✅ Signal is correctly declared
 
 var current_day: int = 1
 var time_of_day: float = 0.0
@@ -17,9 +17,9 @@ func _process(delta):
 		time_of_day = 0.0
 		current_day += 1
 		print("New Day:", current_day)
-		emit_signal("time_updated", current_day, time_of_day)
-	else:
-		emit_signal("time_updated", current_day, time_of_day)
+		time_updated.emit(current_day, time_of_day)  # ✅ Correct emission
+
+	time_updated.emit(current_day, time_of_day)  # ✅ Ensures it's emitted every frame
 
 func toggle_pause():
 	is_paused = !is_paused
