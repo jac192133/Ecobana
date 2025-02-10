@@ -56,3 +56,5 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "day 1"
 script = ExtResource("8_yqss7")
+
+[connection signal="time_updated" from="TimeManager" to="Control/CalenderLabel" method="_on_time_manager_time_updated"]
