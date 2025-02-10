@@ -18,8 +18,8 @@ func _process(delta):
 		current_day += 1
 		print("New Day:", current_day)
 		emit_signal("time_updated", current_day, time_of_day)
-
-	emit_signal("time_updated", current_day, time_of_day)
+	else:
+		emit_signal("time_updated", current_day, time_of_day)
 
 func toggle_pause():
 	is_paused = !is_paused
