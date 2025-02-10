@@ -1,7 +1,7 @@
-shader_type canvas_item;  
+shader_type canvas_item;
 
 // Explicitly declare the water texture
-uniform sampler2D water_texture;  
+uniform sampler2D water_texture;
 uniform float transparency; // Transparency control
 
 void fragment() {
