@@ -55,10 +55,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.854902, 0.72549, 1)
 
-[node name="FloorBoard" type="Line2D" parent="Control/Wall"]
+[node name="FloorLine" type="Line2D" parent="Control/Wall"]
 points = PackedVector2Array(-50, 600, 1300, 650)
 width = 4.0
 default_color = Color(0.545098, 0.352941, 0.168627, 1)
+antialiased = true
 
 [node name="PauseToggleButton" type="Button" parent="."]
 offset_left = 950.0
