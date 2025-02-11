@@ -42,8 +42,6 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 color = Color(1, 0.854902, 0.72549, 1)
 
 [node name="Table" type="ColorRect" parent="Control"]
@@ -62,6 +60,7 @@ offset_bottom = 272.0
 script = ExtResource("8_halce")
 
 [node name="Tank" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(90, 193)
 scale = Vector2(1.56255, 1.61625)
 texture = ExtResource("4_vtdbg")
