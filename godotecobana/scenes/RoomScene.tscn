@@ -1,12 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://enjmj0ap4g8g"]
+[gd_scene load_steps=10 format=3 uid="uid://enjmj0ap4g8g"]
 
-[ext_resource type="Script" path="res://scenes/wall.gd" id="3_cu78b"]
+[ext_resource type="Shader" path="res://shaders/wall_shader.gdshader" id="3_rndrm"]
 [ext_resource type="Texture2D" uid="uid://cv2pyir3wuadn" path="res://assets/tank.png" id="4_vtdbg"]
 [ext_resource type="Texture2D" uid="uid://cmwfw2bvbrch2" path="res://assets/water.png" id="5_6y8bk"]
 [ext_resource type="Shader" path="res://shaders/water_shader.gdshader" id="5_ars8m"]
 [ext_resource type="Script" path="res://scenes/time_manager.gd" id="7_pvwk2"]
 [ext_resource type="Script" path="res://scenes/pause_toggle_button.gd" id="8_halce"]
 [ext_resource type="Script" path="res://scenes/calender_label.gd" id="8_yqss7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dhxkg"]
+shader = ExtResource("3_rndrm")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b8m4u"]
 shader = ExtResource("5_ars8m")
@@ -41,13 +44,21 @@ text = "day 1"
 script = ExtResource("8_yqss7")
 
 [node name="Wall" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_dhxkg")
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3_cu78b")
+color = Color(1, 0.854902, 0.72549, 1)
+
+[node name="FloorBoard" type="Line2D" parent="Control/Wall"]
+points = PackedVector2Array(-50, 600, 1300, 650)
+width = 4.0
+default_color = Color(0.545098, 0.352941, 0.168627, 1)
 
 [node name="PauseToggleButton" type="Button" parent="."]
 offset_left = 950.0
