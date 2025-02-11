@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://enjmj0ap4g8g"]
+[gd_scene load_steps=11 format=3 uid="uid://enjmj0ap4g8g"]
 
 [ext_resource type="Texture2D" uid="uid://2d2snvea8v4" path="res://assets/wall.png" id="1_fvtvw"]
 [ext_resource type="Texture2D" uid="uid://doa00vl4xw2uf" path="res://assets/table.png" id="3_73a6n"]
@@ -6,12 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://cmwfw2bvbrch2" path="res://assets/water.png" id="5_6y8bk"]
 [ext_resource type="Shader" path="res://shaders/water_shader.gdshader" id="5_ars8m"]
 [ext_resource type="Script" path="res://scenes/time_manager.gd" id="7_pvwk2"]
+[ext_resource type="Script" path="res://scenes/pause_button.gd" id="8_erqau"]
 [ext_resource type="Script" path="res://scenes/calender_label.gd" id="8_yqss7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b8m4u"]
 shader = ExtResource("5_ars8m")
 shader_parameter/transparency = 0.0
 shader_parameter/water_texture = ExtResource("5_6y8bk")
+
+[sub_resource type="Theme" id="Theme_1vjwf"]
 
 [node name="RoomScene" type="Node2D"]
 texture_filter = 1
@@ -52,13 +55,35 @@ script = ExtResource("7_pvwk2")
 
 [node name="CalenderLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 353.0
-offset_top = 247.0
-offset_right = 461.0
-offset_bottom = 305.0
+offset_left = 346.0
+offset_top = 184.0
+offset_right = 454.0
+offset_bottom = 242.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "day 1"
 script = ExtResource("8_yqss7")
+
+[node name="PauseButton" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 234.0
+offset_right = 602.0
+offset_bottom = 274.0
+color = Color(1, 0.4, 0.4, 1)
+script = ExtResource("8_erqau")
+
+[node name="PauseLabel" type="Label" parent="Control/PauseButton"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 2.0
+offset_right = 200.0
+offset_bottom = 38.0
+theme = SubResource("Theme_1vjwf")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "UNPAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="time_updated" from="TimeManager" to="Control/CalenderLabel" method="_on_time_manager_time_updated"]
