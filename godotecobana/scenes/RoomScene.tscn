@@ -56,6 +56,7 @@ grow_vertical = 2
 color = Color(1, 0.854902, 0.72549, 1)
 
 [node name="Table" type="Polygon2D" parent="Control"]
+position = Vector2(642, 362)
 polygon = PackedVector2Array(-640, 360, 640, 360, 540, 300, -540, 300)
 
 [node name="PauseToggleButton" type="Button" parent="."]
