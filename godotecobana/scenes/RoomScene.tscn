@@ -22,10 +22,20 @@ script = ExtResource("7_pvwk2")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource("7_pvwk2")
+
+[node name="CalenderLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 168.0
+offset_right = 477.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "day 1"
+script = ExtResource("8_yqss7")
 
 [node name="Wall" type="ColorRect" parent="Control"]
 layout_mode = 1
@@ -39,17 +49,6 @@ color = Color(1, 0.854902, 0.72549, 1)
 [node name="Table" type="ColorRect" parent="Control"]
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="CalenderLabel" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 369.0
-offset_top = 168.0
-offset_right = 477.0
-offset_bottom = 226.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "day 1"
-script = ExtResource("8_yqss7")
 
 [node name="PauseToggleButton" type="Button" parent="."]
 offset_left = 369.0
