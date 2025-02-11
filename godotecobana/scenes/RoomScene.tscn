@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://enjmj0ap4g8g"]
+[gd_scene load_steps=10 format=3 uid="uid://enjmj0ap4g8g"]
 
 [ext_resource type="Texture2D" uid="uid://2d2snvea8v4" path="res://assets/wall.png" id="1_fvtvw"]
 [ext_resource type="Texture2D" uid="uid://doa00vl4xw2uf" path="res://assets/table.png" id="3_73a6n"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmwfw2bvbrch2" path="res://assets/water.png" id="5_6y8bk"]
 [ext_resource type="Shader" path="res://shaders/water_shader.gdshader" id="5_ars8m"]
 [ext_resource type="Script" path="res://scenes/time_manager.gd" id="7_pvwk2"]
+[ext_resource type="Script" path="res://scenes/pause_toggle_button.gd" id="8_halce"]
 [ext_resource type="Script" path="res://scenes/calender_label.gd" id="8_yqss7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b8m4u"]
@@ -52,13 +53,20 @@ script = ExtResource("7_pvwk2")
 
 [node name="CalenderLabel" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 346.0
-offset_top = 184.0
-offset_right = 454.0
-offset_bottom = 242.0
+offset_left = 369.0
+offset_top = 168.0
+offset_right = 477.0
+offset_bottom = 226.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "day 1"
 script = ExtResource("8_yqss7")
+
+[node name="PauseToggleButton" type="Button" parent="."]
+offset_left = 369.0
+offset_top = 222.0
+offset_right = 669.0
+offset_bottom = 272.0
+script = ExtResource("8_halce")
 
 [connection signal="time_updated" from="TimeManager" to="Control/CalenderLabel" method="_on_time_manager_time_updated"]
