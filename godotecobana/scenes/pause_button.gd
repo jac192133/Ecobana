@@ -1,28 +1,39 @@
-extends ColorRect
-
-@onready var pause_label = $PauseLabel
+extends Button
 
 func _ready():
-	# Allow button clicks and spacebar to toggle pause
-	set_process_input(true)
-	update_pause_state()
+	# Ensure the game starts in a paused state
+	get_tree().paused = true
+	# Update the button's appearance to reflect the paused state
+	update_button_appearance()
+	# Connect the button's pressed signal to toggle_pause
+	self.pressed.connect(_on_PauseButton_pressed)
+	# Set the button to ignore focus to prevent Spacebar activation issues
+	focus_mode = Control.FOCUS_NONE
+	# Ensure the script always processes input
+	process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _input(event):
-	if event.is_action_pressed("pause_toggle"):  # Spacebar toggles pause
+	if event.is_action_pressed("pause_toggle"):
 		toggle_pause()
 
-func _gui_input(event):
-	if event is InputEventMouseButton and event.pressed:
-		toggle_pause()
+func _on_PauseButton_pressed():
+	toggle_pause()
 
 func toggle_pause():
-	get_tree().paused = !get_tree().paused  # Toggle pause state
-	update_pause_state()
+	# Toggle the paused state
+	get_tree().paused = not get_tree().paused
+	# Update the button's appearance based on the new state
+	update_button_appearance()
 
-func update_pause_state():
+func update_button_appearance():
+	var style = StyleBoxFlat.new()
+
 	if get_tree().paused:
-		self.color = Color(0.6, 0.8, 1.0)  # Light blue when paused
-		pause_label.text = "PAUSED"
+		text = "PAUSED"
+		style.bg_color = Color(0.678, 0.847, 0.902) # Light blue
 	else:
-		self.color = Color(1.0, 0.4, 0.4)  # Light red when unpaused
-		pause_label.text = "UNPAUSED"
+		text = "UNPAUSED"
+		style.bg_color = Color(1.0, 0.627, 0.478) # Light red
+
+	add_theme_color_override("font_color", Color(0, 0, 0))  # ✅ Black text
+	set("theme_override_styles/panel", style)  # ✅ Corrected way to override button color
