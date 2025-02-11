@@ -15,7 +15,6 @@ shader_parameter/water_texture = ExtResource("5_6y8bk")
 [node name="RoomScene" type="Node2D"]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(574, 268)
 
 [node name="TimeManager" type="Node" parent="."]
 script = ExtResource("7_pvwk2")
@@ -26,16 +25,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource("7_pvwk2")
 
 [node name="CalenderLabel" type="Label" parent="Control"]
+z_index = 1
 layout_mode = 0
-offset_left = 369.0
-offset_top = 168.0
-offset_right = 477.0
-offset_bottom = 226.0
+offset_left = 925.0
+offset_top = 300.0
+offset_right = 1025.0
+offset_bottom = 350.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "day 1"
@@ -46,6 +44,8 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.854902, 0.72549, 1)
@@ -53,23 +53,25 @@ color = Color(1, 0.854902, 0.72549, 1)
 [node name="Table" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 470.0
+offset_right = 1280.0
+offset_bottom = 726.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.482353, 0.247059, 0, 1)
 
 [node name="PauseToggleButton" type="Button" parent="."]
-offset_left = 369.0
-offset_top = 222.0
-offset_right = 669.0
-offset_bottom = 272.0
+offset_left = 925.0
+offset_top = 350.0
+offset_right = 1250.0
+offset_bottom = 450.0
 script = ExtResource("8_halce")
 
 [node name="Tank" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(90, 193)
+position = Vector2(656, 437)
 scale = Vector2(1.56255, 1.61625)
 texture = ExtResource("4_vtdbg")
 
