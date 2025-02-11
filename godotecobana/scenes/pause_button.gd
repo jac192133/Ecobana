@@ -1,39 +1,26 @@
-extends Button
+extends ColorRect  # ✅ Fix: Change from Button to ColorRect
 
 func _ready():
-	# Ensure the game starts in a paused state
-	get_tree().paused = true
-	# Update the button's appearance to reflect the paused state
+	get_tree().paused = true  # Start game paused
 	update_button_appearance()
-	# Connect the button's pressed signal to toggle_pause
-	self.pressed.connect(_on_PauseButton_pressed)
-	# Set the button to ignore focus to prevent Spacebar activation issues
-	focus_mode = Control.FOCUS_NONE
-	# Ensure the script always processes input
-	process_mode = Node.PROCESS_MODE_ALWAYS
+	set_process_input(true)
 
 func _input(event):
 	if event.is_action_pressed("pause_toggle"):
 		toggle_pause()
 
-func _on_PauseButton_pressed():
-	toggle_pause()
-
 func toggle_pause():
-	# Toggle the paused state
 	get_tree().paused = not get_tree().paused
-	# Update the button's appearance based on the new state
 	update_button_appearance()
 
 func update_button_appearance():
 	var style = StyleBoxFlat.new()
-
+	
 	if get_tree().paused:
-		text = "PAUSED"
-		style.bg_color = Color(0.678, 0.847, 0.902) # Light blue
+		style.bg_color = Color(0.678, 0.847, 0.902)  # Light blue
+		self.get_parent().get_node("PauseLabel").text = "PAUSED"  # Assuming PauseLabel is inside
 	else:
-		text = "UNPAUSED"
-		style.bg_color = Color(1.0, 0.627, 0.478) # Light red
+		style.bg_color = Color(1.0, 0.627, 0.478)  # Light red
+		self.get_parent().get_node("PauseLabel").text = "UNPAUSED"
 
-	add_theme_color_override("font_color", Color(0, 0, 0))  # ✅ Black text
-	set("theme_override_styles/panel", style)  # ✅ Corrected way to override button color
+	self.set("theme_override_styles/panel", style)  # Corrected way to change color
