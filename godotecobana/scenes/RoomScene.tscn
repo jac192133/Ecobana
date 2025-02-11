@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://enjmj0ap4g8g"]
 
-[ext_resource type="Script" path="res://scenes/debug.gd" id="3_bbl2q"]
+[ext_resource type="Script" path="res://scenes/wall.gd" id="3_cu78b"]
 [ext_resource type="Texture2D" uid="uid://cv2pyir3wuadn" path="res://assets/tank.png" id="4_vtdbg"]
 [ext_resource type="Texture2D" uid="uid://cmwfw2bvbrch2" path="res://assets/water.png" id="5_6y8bk"]
 [ext_resource type="Shader" path="res://shaders/water_shader.gdshader" id="5_ars8m"]
@@ -47,7 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("3_bbl2q")
+script = ExtResource("3_cu78b")
 
 [node name="PauseToggleButton" type="Button" parent="."]
 offset_left = 950.0
