@@ -46,7 +46,7 @@ text = "day 1"
 script = ExtResource("8_yqss7")
 
 [node name="TableSizeDropdown" type="OptionButton" parent="Control"]
-z_index = 3
+z_index = 5
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 20.0
