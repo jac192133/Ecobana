@@ -35,3 +35,7 @@ func _process(delta):
 func toggle_pause():
 	is_paused = !is_paused
 	print("Game Paused:", is_paused)
+
+
+func _on_item_selected(index: int) -> void:
+	pass # Replace with function body.
