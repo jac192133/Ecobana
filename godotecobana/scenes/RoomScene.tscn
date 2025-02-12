@@ -75,5 +75,3 @@ polygon = PackedVector2Array(0, 0, -300, 300, -300, 1020, 0, 720)
 visible = false
 color = Color(0.00784314, 0.854902, 0.027451, 1)
 polygon = PackedVector2Array(1280, 0, 980, 300, 980, 1020, 1280, 720)
-
-[connection signal="time_updated" from="TimeManager" to="Control/CalenderLabel" method="_on_time_manager_time_updated"]

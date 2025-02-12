@@ -1,15 +1,11 @@
+# calender_label.gd - Ensuring it properly updates on day change and avoiding null reference error
+
 extends Label
 
-@onready var time_manager = get_node("/root/RoomScene/TimeManager")
-
 func _ready():
+	var time_manager = get_tree().get_root().find_child("TimeManager", true, false)
 	if time_manager:
-		if not time_manager.time_updated.is_connected(_on_time_manager_time_updated):
-			time_manager.time_updated.connect(_on_time_manager_time_updated)
-			print("✅ CalendarLabel successfully connected to time_updated signal!")  # Debugging confirmation
-		else:
-			print("⚠️ Warning: CalendarLabel was already connected to time_updated.")
+		time_manager.connect("day_changed", _on_day_changed)
 
-func _on_time_manager_time_updated(day: int, _time_of_day: float):  # ✅ Fixed unused variable warning
-	text = "Day " + str(day)
-	print("📅 Updated Calendar Label: Day", day)  # Debugging confirmation
+func _on_day_changed(new_day: int):
+	text = "Day: " + str(new_day)
