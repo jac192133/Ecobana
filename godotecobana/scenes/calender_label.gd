@@ -4,12 +4,12 @@ extends Label
 
 func _ready():
 	if time_manager:
-		time_manager.time_updated.connect(_on_time_updated)
-		print("✅ CalendarLabel connected to time_updated signal!")  # Debugging confirmation
+		if not time_manager.time_updated.is_connected(_on_time_manager_time_updated):
+			time_manager.time_updated.connect(_on_time_manager_time_updated)
+			print("✅ CalendarLabel successfully connected to time_updated signal!")  # Debugging confirmation
+		else:
+			print("⚠️ Warning: CalendarLabel was already connected to time_updated.")
 
-func _on_time_updated(day: int, time_of_day: float):
-	var current_hour = int(time_of_day * 24)  # Convert time_of_day (0.0-1.0) into hours (0-23)
-	print("🕒 Updating Calendar UI: Day", day, "| Hour:", current_hour)  # Debugging confirmation
-	
-	# Update the label text
-	text = "Day %d | Hour: %02d:00" % [day, current_hour]
+func _on_time_manager_time_updated(day: int, _time_of_day: float):  # ✅ Fixed unused variable warning
+	text = "Day " + str(day)
+	print("📅 Updated Calendar Label: Day", day)  # Debugging confirmation
