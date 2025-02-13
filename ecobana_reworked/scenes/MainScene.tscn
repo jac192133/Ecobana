@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ds13lhqlantwb"]
 
 [ext_resource type="Shader" path="res://shaders/substrate_gradient_shader.gdshader" id="1_nrpga"]
-[ext_resource type="Script" path="res://scenes/ui_handler.gd" id="2_k81yj"]
+[ext_resource type="Script" path="res://scripts/ui_handler.gd" id="2_k81yj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m7d6k"]
 shader = ExtResource("1_nrpga")
@@ -10,7 +10,7 @@ shader = ExtResource("1_nrpga")
 
 [node name="Background" type="ColorRect" parent="."]
 z_index = -1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 1920.0
