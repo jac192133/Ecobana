@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ds13lhqlantwb"]
+[gd_scene load_steps=4 format=3 uid="uid://ds13lhqlantwb"]
 
 [ext_resource type="Shader" path="res://shaders/substrate_gradient_shader.gdshader" id="1_nrpga"]
+[ext_resource type="Script" path="res://scenes/ui_handler.gd" id="2_k81yj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m7d6k"]
 shader = ExtResource("1_nrpga")
@@ -42,3 +43,34 @@ default_color = Color(0, 0, 0, 1)
 points = PackedVector2Array(140, 560, 1000, 560)
 width = 6.0
 default_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_k81yj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubstrateLabel" type="Label" parent="Control/HBoxContainer"]
+z_index = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Substrate:"
+
+[node name="SubstrateDropdown" type="OptionButton" parent="Control/HBoxContainer"]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "Choose!"
+popup/item_1/text = "Fine Sand"
+popup/item_1/id = 1
+popup/item_2/text = "Gravel"
+popup/item_2/id = 2
+popup/item_3/text = "Nutrient-Rich Soil"
+popup/item_3/id = 3
