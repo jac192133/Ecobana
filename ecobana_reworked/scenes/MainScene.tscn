@@ -2,6 +2,17 @@
 
 [node name="MainScene" type="Node2D"]
 
+[node name="Background" type="ColorRect" parent="."]
+z_index = -1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.933333, 0.85098, 0.768627, 1)
+
 [node name="Tank" type="Node2D" parent="."]
 
 [node name="LeftWall" type="Line2D" parent="Tank"]
