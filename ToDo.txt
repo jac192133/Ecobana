@@ -1,6 +1,0 @@
-
-expand lighting system
-- make lamp movable, add overhead movable cord
-- add more lamps, tints...
-- add window(s)
-
