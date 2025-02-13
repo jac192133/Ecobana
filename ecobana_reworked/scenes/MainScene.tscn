@@ -1,10 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds13lhqlantwb"]
-
-[sub_resource type="MultiMesh" id="MultiMesh_vro67"]
+[gd_scene format=3 uid="uid://ds13lhqlantwb"]
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Room" type="Node2D" parent="."]
+[node name="Tank" type="Node2D" parent="."]
 
-[node name="WallsAndFloor" type="MultiMeshInstance2D" parent="Room"]
-multimesh = SubResource("MultiMesh_vro67")
+[node name="LeftWall" type="Line2D" parent="Tank"]
+points = PackedVector2Array(140, 140, 140, 560)
+width = 6.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="RightWall" type="Line2D" parent="Tank"]
+points = PackedVector2Array(1000, 140, 1000, 560)
+width = 6.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Bottom" type="Line2D" parent="Tank"]
+points = PackedVector2Array(140, 560, 1000, 560)
+width = 6.0
+default_color = Color(0, 0, 0, 1)
