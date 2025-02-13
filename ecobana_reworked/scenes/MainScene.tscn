@@ -5,6 +5,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m7d6k"]
 shader = ExtResource("1_nrpga")
+shader_parameter/substrate_color = null
+shader_parameter/square_size = 1.0
 
 [node name="MainScene" type="Node2D"]
 
