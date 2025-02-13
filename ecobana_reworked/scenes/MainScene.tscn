@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://ds13lhqlantwb"]
+[gd_scene load_steps=3 format=3 uid="uid://ds13lhqlantwb"]
+
+[ext_resource type="Shader" path="res://shaders/substrate_gradient_shader.gdshader" id="1_nrpga"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m7d6k"]
+shader = ExtResource("1_nrpga")
 
 [node name="MainScene" type="Node2D"]
 
@@ -14,6 +19,7 @@ grow_vertical = 2
 color = Color(0.933333, 0.85098, 0.768627, 1)
 
 [node name="Substrate" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_m7d6k")
 offset_left = 140.0
 offset_top = 500.0
 offset_right = 1000.0
