@@ -13,6 +13,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.933333, 0.85098, 0.768627, 1)
 
+[node name="Substrate" type="ColorRect" parent="."]
+offset_left = 140.0
+offset_top = 500.0
+offset_right = 1000.0
+offset_bottom = 560.0
+color = Color(0.862745, 0.772549, 0.65098, 1)
+
 [node name="Tank" type="Node2D" parent="."]
 
 [node name="LeftWall" type="Line2D" parent="Tank"]
