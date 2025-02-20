@@ -1,4 +1,14 @@
-[gd_scene format=3 uid="uid://cnhhyoj4lw6wg"]
+[gd_scene load_steps=6 format=3 uid="uid://cnhhyoj4lw6wg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_47sri"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_smlwp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pa4tk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7rs6j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0vwg"]
 
 [node name="Tank" type="Node3D"]
 
@@ -11,3 +21,20 @@
 [node name="BottomPanel" type="MeshInstance3D" parent="."]
 
 [node name="FrontPanel" type="MeshInstance3D" parent="."]
+
+[node name="TankCollision" type="StaticBody3D" parent="."]
+
+[node name="BackCollision" type="CollisionShape3D" parent="TankCollision"]
+shape = SubResource("BoxShape3D_47sri")
+
+[node name="LeftCollision" type="CollisionShape3D" parent="TankCollision"]
+shape = SubResource("BoxShape3D_smlwp")
+
+[node name="RightCollision" type="CollisionShape3D" parent="TankCollision"]
+shape = SubResource("BoxShape3D_pa4tk")
+
+[node name="BottomCollision" type="CollisionShape3D" parent="TankCollision"]
+shape = SubResource("SphereShape3D_7rs6j")
+
+[node name="FrontCollision" type="CollisionShape3D" parent="TankCollision"]
+shape = SubResource("BoxShape3D_e0vwg")
