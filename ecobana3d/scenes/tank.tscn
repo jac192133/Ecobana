@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cnhhyoj4lw6wg"]
+
+[node name="Tank" type="Node3D"]
+
+[node name="BackPanel" type="MeshInstance3D" parent="."]
+
+[node name="LeftPanel" type="MeshInstance3D" parent="."]
+
+[node name="RightPanel" type="MeshInstance3D" parent="."]
+
+[node name="BottomPanel" type="MeshInstance3D" parent="."]
+
+[node name="FrontPanel" type="MeshInstance3D" parent="."]
