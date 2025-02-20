@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnhhyoj4lw6wg"]
+[gd_scene load_steps=7 format=3 uid="uid://cnhhyoj4lw6wg"]
+
+[ext_resource type="Script" path="res://scripts/tank.gd" id="1_heloy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_47sri"]
 
@@ -11,6 +13,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0vwg"]
 
 [node name="Tank" type="Node3D"]
+script = ExtResource("1_heloy")
 
 [node name="BackPanel" type="MeshInstance3D" parent="."]
 
