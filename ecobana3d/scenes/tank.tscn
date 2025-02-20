@@ -6,7 +6,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pa4tk"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_7rs6j"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_j5e2t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e0vwg"]
 
@@ -34,7 +34,7 @@ shape = SubResource("BoxShape3D_smlwp")
 shape = SubResource("BoxShape3D_pa4tk")
 
 [node name="BottomCollision" type="CollisionShape3D" parent="TankCollision"]
-shape = SubResource("SphereShape3D_7rs6j")
+shape = SubResource("BoxShape3D_j5e2t")
 
 [node name="FrontCollision" type="CollisionShape3D" parent="TankCollision"]
 shape = SubResource("BoxShape3D_e0vwg")
