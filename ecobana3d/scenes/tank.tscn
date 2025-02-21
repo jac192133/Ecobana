@@ -48,6 +48,7 @@ surface_material_override/0 = ExtResource("2_7e7gy")
 
 [node name="FrontPanel" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 0.05, 0, 0.75, 0.5)
+visible = false
 mesh = SubResource("BoxMesh_woikx")
 surface_material_override/0 = ExtResource("2_7e7gy")
 
