@@ -1,6 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnhhyoj4lw6wg"]
+[gd_scene load_steps=12 format=3 uid="uid://cnhhyoj4lw6wg"]
 
 [ext_resource type="Script" path="res://scripts/tank.gd" id="1_heloy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gcgpa"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_eql4w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nr7i2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vnkif"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_woikx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_47sri"]
 
@@ -16,14 +26,19 @@
 script = ExtResource("1_heloy")
 
 [node name="BackPanel" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_gcgpa")
 
 [node name="LeftPanel" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_eql4w")
 
 [node name="RightPanel" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_nr7i2")
 
 [node name="BottomPanel" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_vnkif")
 
 [node name="FrontPanel" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_woikx")
 
 [node name="TankCollision" type="StaticBody3D" parent="."]
 
