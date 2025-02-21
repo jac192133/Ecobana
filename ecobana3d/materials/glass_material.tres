@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://th7jiugef1j"]
+
+[resource]
+transparency = 1
+refraction_enabled = true
+refraction_scale = 0.1
