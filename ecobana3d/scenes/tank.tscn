@@ -26,18 +26,24 @@
 script = ExtResource("1_heloy")
 
 [node name="BackPanel" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 0.05, 0, 0.75, -0.5)
 mesh = SubResource("BoxMesh_gcgpa")
 
 [node name="LeftPanel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 1.5, 0, 0, 0, 1, -1, 0.75, 0)
 mesh = SubResource("BoxMesh_eql4w")
 
 [node name="RightPanel" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 1.5, 0, 0, 0, 1, 1, 0.75, 0)
 mesh = SubResource("BoxMesh_nr7i2")
 
 [node name="BottomPanel" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 0.05, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_vnkif")
 
 [node name="FrontPanel" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 0.05, 0, 0.75, 0.5)
+visible = false
 mesh = SubResource("BoxMesh_woikx")
 
 [node name="TankCollision" type="StaticBody3D" parent="."]
