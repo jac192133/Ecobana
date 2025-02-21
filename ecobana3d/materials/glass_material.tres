@@ -2,5 +2,6 @@
 
 [resource]
 transparency = 1
+albedo_color = Color(0.627451, 0.85098, 1, 0)
 refraction_enabled = true
 refraction_scale = 0.1
